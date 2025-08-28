@@ -896,13 +896,13 @@
 
     // Your web app's Firebase configuration
     const firebaseConfig = {
-      apiKey: "AIzaSyDvtUA_iaW7oBS7ybiCq0_nLsdpom02Ulg",
-      authDomain: "sample-firebase-ai-app-7acb0.firebaseapp.com",
-      projectId: "sample-firebase-ai-app-7acb0",
-      storageBucket: "sample-firebase-ai-app-7acb0.firebasestorage.app",
-      messagingSenderId: "610146416226",
-      appId: "1:610146416226:web:48457ecd45921e1db6c33b"
-    };
+    apiKey: "AIzaSyDxa45x3eFlohDS-LPw3mct9YnKgTA0prA",
+    authDomain: "dash-2c965.firebaseapp.com",
+    projectId: "dash-2c965",
+    storageBucket: "dash-2c965.firebasestorage.app",
+    messagingSenderId: "1070664907355",
+    appId: "1:1070664907355:web:5d532df6d1e89f0d661d7e"
+  };
 
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
@@ -1408,7 +1408,7 @@
 
         form.addEventListener('submit', async (e)=>{
           e.preventDefault();
-          const { doc, setDoc, collection, addDoc, updateDoc } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
+          const { doc, collection, addDoc, updateDoc } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
           const hours = parseInt(form['manual-duration-hours'].value, 10) || 0;
           const minutes = parseInt(form['manual-duration-minutes'].value, 10) || 0;
           const dur = (hours * 3600) + (minutes * 60);
@@ -2223,7 +2223,7 @@
 
 
       async renderSessionHistory() {
-        const { deleteDoc, doc } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
+        const { doc, deleteDoc } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
         const listContainer = document.getElementById('session-history-list');
         if (!listContainer) return;
         listContainer.innerHTML = '';
